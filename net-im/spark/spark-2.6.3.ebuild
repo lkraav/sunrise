@@ -28,7 +28,7 @@ src_install() {
 
 	dobin "${FILESDIR}"/spark.sh || die
 	unzip -qq lib/spark.jar
-	doicon "${WORKDIR}"/images/spark-64x64.png
+	doicon "${S}"/images/spark-64x64.png
 	make_desktop_entry spark.sh "Spark IM" spark-64x64 "Network;InstantMessaging"
 
 	if use doc; then
